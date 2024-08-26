@@ -30,6 +30,8 @@ function App() {
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
         style={{
             backgroundImage: `url('https://img.freepik.com/free-vector/collection-virtual-foreign-currency-symbol-background-with-empty-frame_1017-52490.jpg?t=st=1724574096~exp=1724577696~hmac=ae831052b43e10456ff4174c99430c789989c5829c9bcc6ee61dc79742fc3c85&w=740')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
         }}
     >
         <div className="w-full">
@@ -48,7 +50,7 @@ function App() {
                             onCurrencyChange={(currency)=> {setFrom(currency)}}
                             onAmountChange={(amount)=> {setAmount(amount)}}
                             selectCurrency={from}
-                        />
+                            />
                     </div>
                     <div className="relative w-full h-0.5">
                         <button
@@ -67,7 +69,7 @@ function App() {
                             onCurrencyChange={(currency)=> setTo(currency)}
                             selectCurrency={to}
                             amountDisable
-                        />
+                            />
                     </div>
                     <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
                         Convert {from} to {to}
